@@ -19,13 +19,19 @@ public class Regax {
 			System.out.println("Please reenter valid user name");
 			firstName();
 		}
+//<<<<<<< UC3-email
 
 	}
 
 	public static void lastName()
 	{
 		String lastName = user.next();
-		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,}$",lastName);
+		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,}$",lastNamee);
+	}
+	public static void lastName()
+	{
+		String lastName = user.next();
+		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,10}$",lastName);
 		if(name1==true)
 		{
 			System.out.println(lastName+" is valid firstname");
@@ -35,9 +41,7 @@ public class Regax {
 			System.out.println("Please reenter valid user name");
 			lastName();
 		}
-
 	}
-
 	public static void email()
 	{
 		String email = user.next();
@@ -51,9 +55,7 @@ public class Regax {
 			System.out.println("InValid !!!,,Please reenter valid email");
 			email(); 
 		}
-
 	}
-
 	public static void main(String[] args) {
 		System.out.println("enter the user last name");
 		firstName();
@@ -61,6 +63,6 @@ public class Regax {
 		lastName();
 		System.out.println("enter the user email id");
 		email();
-
+    
 	}
 }
