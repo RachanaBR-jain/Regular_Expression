@@ -1,12 +1,17 @@
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+//<<<<<<< UC4-phonenumber
+=======
 //<<<<<< UC7-numberInPassward
+//>>>>>>> master
 
 
 public class Regax {
 	static Scanner user =new Scanner(System.in);
 
+//<<<<<<< UC4-phonenumber
+//=======
 //=======
 //<<<<<<< UC6-UpperCase
 public class Regax {
@@ -16,6 +21,7 @@ public class Regax {
 public class Regax {
 	static Scanner user =new Scanner(System.in);
 
+//>>>>>>> master
 //>>>>>>> master
 //>>>>>>> master
 	public static void firstName()
@@ -53,7 +59,11 @@ public class Regax {
 	public static void email()
 	{
 		String email = user.next();
+//<<<<<<< UC4-phonenumber
+		boolean email1= Pattern.matches("^[A-Za-z0-9]+(\\.[A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", email);
+=======
 		boolean email1= Pattern.matches("^[A-Za-z0-9-\\\\+]+(\\\\.[A-Za-z0-9-]+)*@\" + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$",email);
+//>>>>>>> master
 		if(email1==true)
 		{
 			System.out.println(email1+" is valid email");
@@ -61,6 +71,35 @@ public class Regax {
 		else
 		{ 
 			System.out.println("InValid !!!,,Please reenter valid email");
+//<<<<<<< UC4-phonenumber
+			email();  
+		}
+
+	}
+
+	public static void phoneNumber() {
+		String phone = user.nextLine();
+		boolean result = Pattern.matches("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$", phone);
+		if (result == true) {
+			System.out.println("You Have Enter Valid Mobile Number: " +phone);
+		}else {
+			System.out.println("Please Re-enter Mobile Number: ");
+			phoneNumber();
+		}
+	}
+
+	public static void main(String[] args) {
+	System.out.println("enter the user last name");
+	firstName();
+	System.out.println("enter the user last name");
+	lastName();
+	System.out.println("enter the user email id");
+	email();
+	System.out.println("enter the user phone-number ");
+	phoneNumber();
+}
+}
+//=======
 			//email(); 
 		}
 
@@ -188,3 +227,4 @@ public class Regax {
 		email();
     
 	}}
+//>>>>>>> master
