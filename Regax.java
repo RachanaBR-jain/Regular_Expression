@@ -3,9 +3,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> UC6-UpperCase
+=======
+>>>>>>> UC7-numberInPassward
 
 
 public class Regax {
@@ -66,6 +69,7 @@ public class Regax {
 		{  
 			System.out.println(num+" is valid phone number");
 		} 
+<<<<<<< HEAD
 		else
 		{ 
 			System.out.println("Invalid-->Please reenter valid phone number");
@@ -79,14 +83,29 @@ public class Regax {
 		boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
 		if(password5==true)  
 =======
+=======
+		else 
+		{ 
+			System.out.println("Invalid-->Please reenter valid phone number");
+			//phoneNum();
+		} 
+	}
+>>>>>>> UC7-numberInPassward
 
 	public static void password() 
 	{
 		String pwd= user.next(); 
 		//boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
+<<<<<<< HEAD
 		boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
 		if(password6==true)  
 >>>>>>> UC6-UpperCase
+=======
+		//boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
+		boolean password7= Pattern.matches("(?=.?[A-Z]).{1,}(?=.?[a-z]).{7,}(?=.*?[0-9]).{1,}$",pwd);
+
+		if(password7==true)  
+>>>>>>> UC7-numberInPassward
 		{ 
 			System.out.println("you have entered valid password");  
 		}
@@ -110,14 +129,18 @@ public class Regax {
 		System.out.println("enter the user phone-number ");
 		phoneNum();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> UC6-UpperCase
+=======
+>>>>>>> UC7-numberInPassward
 		System.out.println("enter your passward ");
 		password();
 
 	}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> UC5-password
 
@@ -199,3 +222,5 @@ public class Regax {
 }
 =======
 >>>>>>> UC6-UpperCase
+=======
+>>>>>>> UC7-numberInPassward
