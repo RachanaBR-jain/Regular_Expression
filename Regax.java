@@ -1,14 +1,7 @@
+package com.JavaPractiveProgram;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> UC6-UpperCase
-=======
->>>>>>> UC7-numberInPassward
 
 
 public class Regax {
@@ -49,7 +42,7 @@ public class Regax {
 	public static void email()
 	{
 		String email = user.next();
-		boolean email1= Pattern.matches("^[A-Za-z0-9-\\\\+]+(\\\\.[A-Za-z0-9-]+)*@\" + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$",email);
+		boolean email1= Pattern.matches("^[A-Za-z0-9]+(\\.[A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", email);
 		if(email1==true)
 		{
 			System.out.println(email1+" is valid email");
@@ -57,56 +50,34 @@ public class Regax {
 		else
 		{ 
 			System.out.println("InValid !!!,,Please reenter valid email");
-			//email(); 
+			email();  
 		}
 
 	}
-	public static void phoneNum()
-	{
-		String pnum = user.next(); 
-		boolean num= Pattern.matches("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$",pnum); 
-		if(num==true)
-		{  
-			System.out.println(num+" is valid phone number");
-		} 
-<<<<<<< HEAD
-		else
-		{ 
-			System.out.println("Invalid-->Please reenter valid phone number");
-			//phoneNum();
+
+	static void phoneNumber() {
+
+		String phone = user.nextLine();
+		boolean result = Pattern.matches("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$", phone);
+		if (result == true) {
+			System.out.println("You Have Enter Valid Mobile Number: " +phone);
+		}else {
+			System.out.println("Please Re-enter Mobile Number: ");
+			phoneNumber();
 		}
 	}
-<<<<<<< HEAD
-	public static void password() 
-	{
-		String pwd= user.next(); 
-		boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
-		if(password5==true)  
-=======
-=======
-		else 
-		{ 
-			System.out.println("Invalid-->Please reenter valid phone number");
-			//phoneNum();
-		} 
-	}
->>>>>>> UC7-numberInPassward
+
 
 	public static void password() 
 	{
 		String pwd= user.next(); 
 		//boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
-<<<<<<< HEAD
-		boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
-		if(password6==true)  
->>>>>>> UC6-UpperCase
-=======
 		//boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
-		boolean password7= Pattern.matches("(?=.?[A-Z]).{1,}(?=.?[a-z]).{7,}(?=.*?[0-9]).{1,}$",pwd);
+		//boolean password7= Pattern.matches("(?=.?[A-Z]).{1,}(?=.?[a-z]).{7,}(?=.*?[0-9]).{1,}$",pwd);
+		boolean password8= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
 
-		if(password7==true)  
->>>>>>> UC7-numberInPassward
-		{ 
+		if(password8==true)   
+		{  
 			System.out.println("you have entered valid password");  
 		}
 		else
@@ -120,107 +91,16 @@ public class Regax {
 
 
 	public static void main(String[] args) {
-		System.out.println("enter the user last name");
+		System.out.println("enter the user last name"); 
 		firstName();
 		System.out.println("enter the user last name");
 		lastName();
 		System.out.println("enter the user email id");
 		email();
 		System.out.println("enter the user phone-number ");
-		phoneNum();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> UC6-UpperCase
-=======
->>>>>>> UC7-numberInPassward
+		phoneNumber();
 		System.out.println("enter your passward ");
 		password();
 
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> UC5-password
-
-
-public class Regax {
-	static Scanner user =new Scanner(System.in);
-
-	public static void firstName()
-	{
-		String firstName = user.next();
-		boolean name= Pattern.matches("^[A-Z]{1}[a-z]{3,10}$",firstName);
-		if(name==true)
-		{
-			System.out.println(firstName+" is valid firstname");
-		}
-		else
-		{ 
-			System.out.println("Please reenter valid user name");
-			firstName();
-		}
-<<<<<<< HEAD
-	}
-	public static void lastName()
-	{
-		String lastName = user.next();
-		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,10}$",lastName);
-=======
-
-	}
-
-	public static void lastName()
-	{
-		String lastName = user.next();
-		boolean name1= Pattern.matches("^[A-Z]{1}[a-z]{3,}$",lastName);
->>>>>>> UC3-email
-		if(name1==true)
-		{
-			System.out.println(lastName+" is valid firstname");
-		}
-		else
-		{ 
-			System.out.println("Please reenter valid user name");
-			lastName();
-		}
-
-	}
-
-<<<<<<< HEAD
-=======
-	public static void email()
-	{
-		String email = user.next();
-		boolean email1= Pattern.matches("^[A-Za-z0-9-\\\\+]+(\\\\.[A-Za-z0-9-]+)*@\" + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$",email);
-		if(email1==true)
-		{
-			System.out.println(email1+" is valid email");
-		}
-		else
-		{ 
-			System.out.println("InValid !!!,,Please reenter valid email");
-			email(); 
-		}
-
-	}
-
->>>>>>> UC3-email
-	public static void main(String[] args) {
-		System.out.println("enter the user last name");
-		firstName();
-		System.out.println("enter the user last name");
-		lastName();
-<<<<<<< HEAD
-=======
-		System.out.println("enter the user email id");
-		email();
-
->>>>>>> UC3-email
-	}
-}
-=======
->>>>>>> UC6-UpperCase
-=======
->>>>>>> UC7-numberInPassward
