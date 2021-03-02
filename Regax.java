@@ -1,6 +1,13 @@
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+//<<<<<< UC7-numberInPassward
+
+
+public class Regax {
+	static Scanner user =new Scanner(System.in);
+
+//=======
 //<<<<<<< UC6-UpperCase
 public class Regax {
 	static Scanner user =new Scanner(System.in);
@@ -9,6 +16,7 @@ public class Regax {
 public class Regax {
 	static Scanner user =new Scanner(System.in);
 
+//>>>>>>> master
 //>>>>>>> master
 	public static void firstName()
 	{
@@ -65,25 +73,35 @@ public class Regax {
 		{  
 			System.out.println(num+" is valid phone number");
 		} 
+//<<<<<<< UC7-numberInPassward
+		else 
+		{ 
+			System.out.println("Invalid-->Please reenter valid phone number");
+			//phoneNum();
+		} 
+
 		else
 		{ 
 			System.out.println("Invalid-->Please reenter valid phone number");
 			//phoneNum();
 		}
 	}
-
 	public static void password() 
 	{
 		String pwd= user.next(); 
 		//boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
+		//boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
+		boolean password7= Pattern.matches("(?=.?[A-Z]).{1,}(?=.?[a-z]).{7,}(?=.*?[0-9]).{1,}$",pwd);
+
+		if(password7==true)  
 		boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
 		if(password6==true)  
-//=======
 	public static void password() 
 	{
 		String pwd= user.next(); 
 		boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
 		if(password5==true)  
+//>>>>>>> master
 //>>>>>>> master
 		{ 
 			System.out.println("you have entered valid password");  
@@ -104,18 +122,12 @@ public class Regax {
 		email();
 		System.out.println("enter the user phone-number ");
 		phoneNum();
-//<<<<<<< UC6-UpperCase
 
-//=======
-//>>>>>>> master
 		System.out.println("enter your passward ");
 		password();
 
 	}
 }
-//<<<<<<< UC6-UpperCase
-//=======
-
 
 public class Regax {
 	static Scanner user =new Scanner(System.in);
@@ -133,10 +145,7 @@ public class Regax {
 			System.out.println("Please reenter valid user name");
 			firstName();
 		}
-//<<<<<<< UC3-email
-
 	}
-
 	public static void lastName()
 	{
 		String lastName = user.next();
