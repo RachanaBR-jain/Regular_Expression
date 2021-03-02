@@ -1,10 +1,15 @@
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+//<<<<<<< UC6-UpperCase
+public class Regax {
+	static Scanner user =new Scanner(System.in);
+//=======
 //<<<<<<< UC5-password
 public class Regax {
 	static Scanner user =new Scanner(System.in);
 
+//>>>>>>> master
 	public static void firstName()
 	{
 		String firstName = user.next();
@@ -66,11 +71,20 @@ public class Regax {
 			//phoneNum();
 		}
 	}
+
+	public static void password() 
+	{
+		String pwd= user.next(); 
+		//boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
+		boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
+		if(password6==true)  
+//=======
 	public static void password() 
 	{
 		String pwd= user.next(); 
 		boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
 		if(password5==true)  
+//>>>>>>> master
 		{ 
 			System.out.println("you have entered valid password");  
 		}
@@ -81,9 +95,6 @@ public class Regax {
 		}
 
 	}
-
-
-
 	public static void main(String[] args) {
 		System.out.println("enter the user last name");
 		firstName();
@@ -93,11 +104,17 @@ public class Regax {
 		email();
 		System.out.println("enter the user phone-number ");
 		phoneNum();
+//<<<<<<< UC6-UpperCase
+
+//=======
+//>>>>>>> master
 		System.out.println("enter your passward ");
 		password();
 
 	}
 }
+//<<<<<<< UC6-UpperCase
+//=======
 
 
 public class Regax {
