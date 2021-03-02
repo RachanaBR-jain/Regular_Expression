@@ -2,7 +2,10 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> UC6-UpperCase
 
 
 public class Regax {
@@ -69,11 +72,21 @@ public class Regax {
 			//phoneNum();
 		}
 	}
+<<<<<<< HEAD
 	public static void password() 
 	{
 		String pwd= user.next(); 
 		boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
 		if(password5==true)  
+=======
+
+	public static void password() 
+	{
+		String pwd= user.next(); 
+		//boolean password5= Pattern.matches("^[A-Za-z]{8}$",pwd);
+		boolean password6= Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}",pwd);
+		if(password6==true)  
+>>>>>>> UC6-UpperCase
 		{ 
 			System.out.println("you have entered valid password");  
 		}
@@ -96,11 +109,16 @@ public class Regax {
 		email();
 		System.out.println("enter the user phone-number ");
 		phoneNum();
+<<<<<<< HEAD
+=======
+
+>>>>>>> UC6-UpperCase
 		System.out.println("enter your passward ");
 		password();
 
 	}
 }
+<<<<<<< HEAD
 >>>>>>> UC5-password
 
 
@@ -179,3 +197,5 @@ public class Regax {
 >>>>>>> UC3-email
 	}
 }
+=======
+>>>>>>> UC6-UpperCase
